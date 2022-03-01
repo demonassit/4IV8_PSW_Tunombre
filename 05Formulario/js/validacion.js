@@ -54,6 +54,8 @@ function validar(formulario){
 
     var checkOK = "0123456789";
 
+// var checkstr = document.formulario.nombre.value;
+
     var checkStr = formulario.edad.value;
 
     var allValido = true;
