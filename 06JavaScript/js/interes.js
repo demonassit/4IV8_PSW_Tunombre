@@ -16,3 +16,27 @@ function validarn(e){
     return patron.test(probar);
 
 }
+
+
+function interes(){
+
+    var valor = document.formulario1.cantidad.value;
+
+    //tipo de dato
+
+    var resul = parseInt(valor);
+
+    var interes = resul*0.025;
+
+    var total = resul + interes;
+
+    //vamos a imprimir el resultado
+
+    document.formulario1.sueldoI.value = "$" + total;
+}
+
+function borrar(){
+
+    document.formulario1.sueldoI.value = "";
+    document.formulario1.cantidad.value = "";
+}
