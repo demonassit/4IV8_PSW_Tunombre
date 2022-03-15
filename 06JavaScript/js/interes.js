@@ -35,7 +35,7 @@ function interes(){
     document.formulario1.sueldoI.value = "$" + total;
 }
 
-function borrar(){
+function borrard(){
 
     document.formulario1.sueldoI.value = "";
     document.formulario1.cantidad.value = "";
