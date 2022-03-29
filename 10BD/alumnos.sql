@@ -18,6 +18,8 @@
 --
 -- Table structure for table `alumnobatiz`
 --
+create database alumnos;
+use alumnos;
 
 DROP TABLE IF EXISTS `alumnobatiz`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
