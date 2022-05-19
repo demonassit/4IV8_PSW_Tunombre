@@ -53,6 +53,8 @@ public class MPersona {
             //establecemos la conexion
             con = Conexion.getConection();
             String q = "select * from mpersona "
+                    + "inner join cprivilegio "
+                    + "on (mpersona.privilegio_id = cprivilegio.privilegio_id) "
                     + "where persona_user=? and persona_pass=?";
             //preparo la sentencia
             ps.setString(1, user);
@@ -62,6 +64,7 @@ public class MPersona {
             //buscamos al usuario
             while(rs.next()){
                 persona = new MPersona();
+                //cprivilegio pri = new cprivilegio();
                 persona.setPersona_id(rs.getInt("persona_id"));
                 persona.setAlumno_boleta(rs.getInt("alumno_boleta"));
                 persona.setEmpleado_num(rs.getInt("empleado_num"));
@@ -75,6 +78,8 @@ public class MPersona {
                 persona.setGrupo_id(rs.getInt("grupo_id"));
                 persona.setRol_id(rs.getInt("rol_id"));
                 persona.setPrivilegio_id(rs.getInt("privilegio_id"));
+                //pri.setPrivilegio_tipo(rs.getString("privilegio_tipo"));
+                
                 break;
             }
         
